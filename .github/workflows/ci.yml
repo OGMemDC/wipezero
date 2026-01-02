@@ -1,0 +1,61 @@
+# CI workflow for WipeZero
+# - Unit tests run on push and pull_request
+# - Integration loopback test is opt-in via workflow_dispatch and requires a self-hosted Linux runner with `losetup` and sufficient privileges
+
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      run_integration:
+        description: 'Run integration loopback test (requires self-hosted runner)'
+        required: false
+        default: 'false'
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      - name: Run unit tests
+        run: pytest -q
+
+  integration-loopback:
+    # This job runs when explicitly requested via workflow_dispatch *or* when a PR is labeled `run-integration`.
+    # It is gated by the repository secret `ENABLE_INTEGRATION` to prevent accidental runs.
+    if: |
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.run_integration == 'true' && secrets.ENABLE_INTEGRATION == 'true') ||
+      (github.event_name == 'pull_request' && contains(join(github.event.pull_request.labels.*.name, ','), 'run-integration') && secrets.ENABLE_INTEGRATION == 'true')
+    needs: unit
+    runs-on: [self-hosted, linux]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Confirm integration gate
+        run: |
+          echo "Integration gate OK: ENABLE_INTEGRATION is set"
+
+      - name: Make integration script executable
+        run: chmod +x tests/integration_loopback.sh
+
+      - name: Run loopback integration test
+        # This will perform destructive operations on loop devices; ensure the runner is safe and disposable
+        run: |
+          RUN_INTEGRATION=1 bash tests/integration_loopback.sh
