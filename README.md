@@ -1,6 +1,6 @@
 # WipeZero
 
-Lightweight USB storage wipe utility for testing and CI.
+Lightweight USB storage wipe utility.
 
 [![CI](https://github.com/<OWNER>/<REPO>/actions/workflows/ci.yml/badge.svg)](https://github.com/<OWNER>/<REPO>/actions/workflows/ci.yml)
 
