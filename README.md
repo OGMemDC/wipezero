@@ -2,7 +2,7 @@
 
 Lightweight USB storage wipe utility.
 
-[![CI](https://github.com/<OWNER>/<REPO>/actions/workflows/ci.yml/badge.svg)](https://github.com/<OWNER>/<REPO>/actions/workflows/ci.yml)
+[![CI](https://github.com/OGMemDC/wipezero/actions/workflows/ci.yml/badge.svg)](https://github.com/OGMemDC/wipezero/actions/workflows/ci.yml)
 
 Quick start
 
@@ -13,7 +13,7 @@ Quick start
   ```bash
   # Safety gate: set RUN_INTEGRATION=1 to opt in
   export RUN_INTEGRATION=1
-  make integration
+  tests/integration_loopback.sh
   ```
 
 CI integration notes
@@ -23,4 +23,3 @@ CI integration notes
   - A workflow dispatch is performed with `run_integration=true` AND the repository secret `ENABLE_INTEGRATION=true`, OR
   - A PR is labeled `run-integration` AND the repository secret `ENABLE_INTEGRATION=true`.
 
-Replace `<OWNER>/<REPO>` in the CI badge URL with your repository owner/name to enable the badge link.
