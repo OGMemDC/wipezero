@@ -1,5 +1,6 @@
-![wipezero logo](https://github.com/OGMemDC/wipezero/blob/main/doc/resources/wipezero_small.png)
 # WipeZero
+
+![wipezero logo](https://github.com/OGMemDC/wipezero/blob/main/doc/resources/wipezero_small.png)  
 
 Lightweight USB storage wipe utility for linux.
 
@@ -11,11 +12,13 @@ Lightweight USB storage wipe utility for linux.
 - [Contributing]
 
 ## Overview
+
 WipeZero quickly wipes any remenants of data from a USB storage device. You can select the level of data wipe to be performed using a pre-built profile, or you can set custom data wipe parameters.
 
 The utility will create you a NIST data wipe report, and a cryptographically signed with hardware hash signature report if you so desire.
 
 ## Installation
+
 WipeZero was designed and developed on Ubuntu 25.10 Linux because that was my need at the time. I did add code for Mac & Windows platforms but I will admit it has not been thouroughly tested (other then on Ubuntu).
 
 To install on Ubuntu Linux:
@@ -30,14 +33,14 @@ To install on other operating systems:
 - write your own installer, I have not got to it yet ;-)
 
 ## Running
+
 WipeZero takes a fair number of command line arguments to run:
 
 >**usage:&nbsp;&nbsp;wipezero&nbsp;&nbsp;[-h] [--force] [--profile {nist-clear,nist-purge,dod-short,dod custom}]**  
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[--passes PASSES] [--progress] [--gui] [--list] [--crypto-erase] [--secure-erase]**  
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[--auto] [--verify] [--report] [--report-dir REPORT_DIR] [--pdf-report]**
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[--hash-verify][--gui-report] [--detect-fake-usb] [--forensic-verify]**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[path]**  
-
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[--hash-verify][--gui-report] [--detect-fake-usb] [--forensic-verify]**  
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[path]**  
 > Advanced, cross-platform, semi-fast, and multi-profile disk wipe utility for removable USB storage devices. Includes multiple reporting options and
 > additional features such as listing removable USB storage devices and detecting fake removable USB storage devices. Author: BlackHatOG Email:
 > <bitbltog@proton.me> Date: December 2025
