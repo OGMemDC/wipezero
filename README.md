@@ -32,21 +32,21 @@ To install on other operating systems:
 ## Running
 WipeZero takes a fair number of command line arguments to run:
 
-`usage: wipezero [-h] [--force] [--profile {nist-clear,nist-purge,dod-short,dod,custom}] [--passes PASSES] [--progress] [--gui] [--list]
-                [--crypto-erase] [--secure-erase] [--auto] [--verify] [--report] [--report-dir REPORT_DIR] [--pdf-report] [--hash-verify]
-                [--gui-report] [--detect-fake-usb] [--forensic-verify]
-                [path]
-
-Advanced, cross-platform, semi-fast, and multi-profile disk wipe utility for removable USB storage devices. Includes multiple reporting options and
-additional features such as listing removable USB storage devices and detecting fake removable USB storage devices. Author: BlackHatOG Email:
-<bitbltog@proton.me> Date: December 2025
-
-positional arguments:
-  path                  Path to the USB storage device/directory/block/etc to be wiped
-
-options:
-  -h, --help            show this help message and exit
-  --force               without this flag specified nothing gets deleted or wiped, just a dry-run
+> usage: wipezero [-h] [--force] [--profile {nist-clear,nist-purge,dod-short,dod custom}] [--passes PASSES] [--progress] [--gui] [--list]
+>                [--crypto-erase] [--secure-erase] [--auto] [--verify] [--report] [--report-dir REPORT_DIR] [--pdf-report] [--hash-verify]
+>                [--gui-report] [--detect-fake-usb] [--forensic-verify]
+>                [path]
+>
+> Advanced, cross-platform, semi-fast, and multi-profile disk wipe utility for removable USB storage devices. Includes multiple reporting options and
+> additional features such as listing removable USB storage devices and detecting fake removable USB storage devices. Author: BlackHatOG Email:
+> <bitbltog@proton.me> Date: December 2025
+> 
+> positional arguments:
+>   path                  Path to the USB storage device/directory/block/etc to be wiped
+> 
+> options:
+>  -h, --help            show this help message and exit
+>  --force               without this flag specified nothing gets deleted or wiped, just a dry-run
   --profile {nist-clear,nist-purge,dod-short,dod,custom}
                         specify the wipe profile or a custom profile (default: nist-clear)
   --passes PASSES       if you do not select a wipe profile then you can specify the number of wipe passes manually (default: 1)
