@@ -33,9 +33,9 @@ To install on other operating systems:
 WipeZero takes a fair number of command line arguments to run:
 
 > **usage:&nbsp;&nbsp;wipezero&nbsp;&nbsp;[-h] [--force] [--profile {nist-clear,nist-purge,dod-short,dod custom}] [--passes PASSES] [--progress] [--gui] [--list]**  
->                   **[--crypto-erase] [--secure-erase] [--auto] [--verify] [--report] [--report-dir REPORT_DIR] [--pdf-report] [--hash-verify]**  
->                   **[--gui-report] [--detect-fake-usb] [--forensic-verify]**  
->                   **[path]**  
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[--crypto-erase] [--secure-erase] [--auto] [--verify] [--report] [--report-dir REPORT_DIR] [--pdf-report] [--hash-verify]**  
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[--gui-report] [--detect-fake-usb] [--forensic-verify]**  
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[path]**  
 
 > Advanced, cross-platform, semi-fast, and multi-profile disk wipe utility for removable USB storage devices. Includes multiple reporting options and
 > additional features such as listing removable USB storage devices and detecting fake removable USB storage devices. Author: BlackHatOG Email:
