@@ -32,7 +32,7 @@ To install on other operating systems:
 ## Running
 WipeZero takes a fair number of command line arguments to run:
 
-> **usage: wipezero [-h] [--force] [--profile {nist-clear,nist-purge,dod-short,dod custom}] [--passes PASSES] [--progress] [--gui] [--list]**  
+> **usage:&nbsp;&nbsp;wipezero&nbsp;&nbsp;[-h] [--force] [--profile {nist-clear,nist-purge,dod-short,dod custom}] [--passes PASSES] [--progress] [--gui] [--list]**  
 >                   **[--crypto-erase] [--secure-erase] [--auto] [--verify] [--report] [--report-dir REPORT_DIR] [--pdf-report] [--hash-verify]**  
 >                   **[--gui-report] [--detect-fake-usb] [--forensic-verify]**  
 >                   **[path]**  
