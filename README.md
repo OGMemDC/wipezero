@@ -1,5 +1,5 @@
+![wipezero logo](https://github.com/OGMemDC/wipezero/blob/main/doc/resources/wipezero_small.png)
 # WipeZero
-
 Lightweight USB storage wipe utility.
 
 [![CI](https://github.com/OGMemDC/wipezero/actions/workflows/ci.yml/badge.svg)](https://github.com/OGMemDC/wipezero/actions/workflows/ci.yml)
