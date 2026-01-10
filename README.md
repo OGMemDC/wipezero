@@ -9,7 +9,16 @@ Lightweight USB storage wipe utility for Linux, provides NIST & DoD level wipe f
 - [Running](#running)
   - [Using Profiles](#using-profiles)
   - [Custom Wipe Settings](#custom-wipe-setting)
+  - [Cryptographic and Secure Wipe](#cryptographic-and-secure-wipe)
+  - [Automatic Mode](#automatic-wipe)
 - [Verification Methods](#verification-methods)
+- [Reporting](#reporting)
+- [Additional Features](#additional-features)
+  - [List USB Devices](#list-detected-usb-devices)
+  - [Progress Bar](#progress-bar)
+  - [GUI Confirmation](#gui-confirmation)
+  - [GUI Report](#gui-report)
+  - [Detect Fake USB](#detect-fake-usb)
 - [Contributing](#contributing)
 
 ## Overview
