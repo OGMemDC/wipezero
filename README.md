@@ -1,31 +1,25 @@
+![wipezero logo](https://github.com/OGMemDC/wipezero/blob/main/doc/resources/wipezero_small.png)
 # WipeZero
+Lightweight USB storage wipe utility.
 
-Lightweight USB storage wipe utility for linux.
+[![CI](https://github.com/OGMemDC/wipezero/actions/workflows/ci.yml/badge.svg)](https://github.com/OGMemDC/wipezero/actions/workflows/ci.yml)
 
-- [Overview]
-- [Installation]
-- [Running]
-  - [Using Profiles]
-  - [Custom Wipe Settings]
-- [Contributing]
+Quick start
 
-## Overview
-WipeZero quickly wipes any remenants of data from a USB storage device. You can select the level of data wipe to be performed using a pre-built profile, or you can set custom data wipe parameters.
+- Install dependencies: `./setup.sh` (Debian/Ubuntu).
+- Run unit tests locally: `make test` (or `pytest -q`).
+- Run integration loopback test locally (destructive; uses loop devices):
 
-The utility will create you a NIST data wipe report, and a cryptographically signed with hardware hash signature report if you so desire.
+  ```bash
+  # Safety gate: set RUN_INTEGRATION=1 to opt in
+  export RUN_INTEGRATION=1
+  tests/integration_loopback.sh
+  ```
 
-## Installation
-WipeZero was designed and developed on Ubuntu 25.10 Linux because that was my need at the time. I did add code for Mac & Windows platforms but I will admit it has not been thouroughly tested (other then on Ubuntu).
+CI integration notes
 
-To install WipeZero on Ubuntu Linux:
-- clone the repository `git clone https://github.com/OGMemDC/wipezero.git`
-- change to the newly created wipezero directory `cd wipezero`
+- Unit tests run on push and PRs automatically.
+- Integration loopback tests are gated and run only when:
+  - A workflow dispatch is performed with `run_integration=true` AND the repository secret `ENABLE_INTEGRATION=true`, OR
+  - A PR is labeled `run-integration` AND the repository secret `ENABLE_INTEGRATION=true`.
 
-
-## Running
-
-### Running - Using Profiles
-
-### Running - Custom Wipe Settings
-
-## Contributing
